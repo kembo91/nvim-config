@@ -11,8 +11,30 @@ return require('packer').startup(function(use)
 		  requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use { "catppuccin/nvim", as = "catppuccin" }
-	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}) 
+	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use({'neovim/nvim-lspconfig'})
+	use 'ray-x/go.nvim'
+	use 'ray-x/guihua.lua'
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
+	use('darrikonn/vim-gofmt', {run='GoUpdateBinaries'})
+	use('rstacruz/vim-closer')
+	use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.8',
+	-- or                            , branch = '0.1.x',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+	}
+	use{
+		'mfussenegger/nvim-dap',
+		requires = {
+			"leoluz/nvim-dap-go",			
+			"rcarriga/nvim-dap-ui",
+			"thehamsta/nvim-dap-virtual-text",
+			"nvim-neotest/nvim-nio",
+			"williamboman/mason.nvim"
+		}
+	}
+	use('nvim-tree/nvim-tree.lua')
+	use('tpope/vim-fugitive')
+	use('karb94/neoscroll.nvim')
 end)

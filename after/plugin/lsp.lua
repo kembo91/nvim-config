@@ -3,7 +3,9 @@
 -- https://www.youtube.com/watch?v=LaS32vctfOY
 
 -- Reserve a space in the gutter
+--
 vim.opt.signcolumn = 'yes'
+
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
@@ -43,6 +45,9 @@ require('lspconfig').gopls.setup({})
 require('lspconfig').lua_ls.setup({})
 require('lspconfig').jsonls.setup({})
 require('lspconfig').eslint.setup({})
+require('lspconfig').eslint.setup({})
+require('lspconfig').jsonls.setup({})
+require('lspconfig').yamlls.setup({})
 
 local cmp = require('cmp')
 

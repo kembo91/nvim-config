@@ -5,9 +5,17 @@ local tree = require("nvim-tree")
 local api = require("nvim-tree.api")
 -- OR setup with some options
 tree.setup({
+	sync_root_with_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+	},
   sort = {
     sorter = "case_sensitive",
   },
+	diagnostics = {
+		enable = true,
+	},
   view = {
     width = 30,
   },

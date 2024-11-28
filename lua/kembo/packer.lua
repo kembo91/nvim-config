@@ -5,6 +5,11 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+
+	use {
+	"vinnymeller/swagger-preview.nvim",
+	run = "npm i",
+	}
 	use 'wbthomason/packer.nvim'
 	use {
 		  'nvim-telescope/telescope.nvim', tag = '0.1.8',
@@ -19,11 +24,6 @@ return require('packer').startup(function(use)
 	use({'hrsh7th/cmp-nvim-lsp'})
 	use('darrikonn/vim-gofmt', {run='GoUpdateBinaries'})
 	use('rstacruz/vim-closer')
-	use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.8',
-	-- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-	}
 	use{
 		'mfussenegger/nvim-dap',
 		requires = {
@@ -37,4 +37,10 @@ return require('packer').startup(function(use)
 	use('nvim-tree/nvim-tree.lua')
 	use('tpope/vim-fugitive')
 	use('karb94/neoscroll.nvim')
+	use {
+	  'lewis6991/gitsigns.nvim',
+	  config = function()
+	    require('gitsigns').setup()
+	  end
+	}
 end)

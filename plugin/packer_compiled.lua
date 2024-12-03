@@ -100,6 +100,11 @@ _G.packer_plugins = {
     path = "/home/kembo/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/kembo/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/kembo/.local/share/nvim/site/pack/packer/start/mason.nvim",

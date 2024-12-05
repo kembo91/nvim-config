@@ -5,7 +5,16 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-
+	use {
+	  "nvim-neotest/neotest",
+	  requires = {
+	    "nvim-neotest/nvim-nio",
+	    "nvim-lua/plenary.nvim",
+	    "antoinemadec/FixCursorHold.nvim",
+	    "nvim-treesitter/nvim-treesitter",
+	    "nvim-neotest/neotest-go",
+	  }
+	}
 	use {
 	"vinnymeller/swagger-preview.nvim",
 	run = "npm i",

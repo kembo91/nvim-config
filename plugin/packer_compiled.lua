@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["FixCursorHold.nvim"] = {
-    loaded = true,
-    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
-    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
-  },
   catppuccin = {
     loaded = true,
     path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -115,15 +110,10 @@ _G.packer_plugins = {
     path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  neotest = {
+  neoterm = {
     loaded = true,
-    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/neotest",
-    url = "https://github.com/nvim-neotest/neotest"
-  },
-  ["neotest-go"] = {
-    loaded = true,
-    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/neotest-go",
-    url = "https://github.com/nvim-neotest/neotest-go"
+    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/neoterm",
+    url = "https://github.com/kassio/neoterm"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -159,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/nvim-nio",
     url = "https://github.com/nvim-neotest/nvim-nio"
+  },
+  ["nvim-tmux-navigation"] = {
+    loaded = true,
+    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/nvim-tmux-navigation",
+    url = "https://github.com/alexghergh/nvim-tmux-navigation"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -204,6 +199,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/vim-gofmt",
     url = "https://github.com/darrikonn/vim-gofmt"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   }
 }
 

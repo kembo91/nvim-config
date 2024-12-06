@@ -1,12 +1,6 @@
-require("neotest").setup({
-	adapters = {
-		require('neotest-go'),
-		require("neotest-python")({
-			dap = { justMyCode = false },
-		}),
-		require("neotest-plenary"),
-		require("neotest-vim-test")({
-			ignore_file_types = { "python", "vim", "lua" },
-		}),
-	},
-})
+vim.keymap.set('n', '<leader>tt', ':TestNearest<CR>') 
+vim.keymap.set('n', '<leader>tf', ':TestFile<CR>') 
+vim.keymap.set('n', '<leader>ts', ':TestSuite<CR>') 
+vim.keymap.set('n', '<leader>tl', ':TestLast<CR>') 
+
+vim.g["test#strategy"] = "basic"

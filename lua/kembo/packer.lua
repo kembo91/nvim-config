@@ -4,6 +4,16 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+	use {
+	"NeogitOrg/neogit",
+	requires= {
+			"nvim-lua/plenary.nvim",         -- required
+			"sindrets/diffview.nvim",        -- optional - Diff integration
+
+			-- Only one of these is needed.
+			"nvim-telescope/telescope.nvim", -- optional
+		},
+	}
 	use {'vim-test/vim-test',
 		requires = {'kassio/neoterm'}
 	}

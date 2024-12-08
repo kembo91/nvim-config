@@ -7,6 +7,15 @@ return require('packer').startup(function(use)
 	use {'vim-test/vim-test',
 		requires = {'kassio/neoterm'}
 	}
+	use({
+	  "NTBBloodbath/galaxyline.nvim",
+	  -- your statusline
+	  config = function()
+	    require("galaxyline.themes.eviline")
+	  end,
+	  -- some optional icons
+	  requires = { "kyazdani42/nvim-web-devicons" }
+	})
 	use {
 		'alexghergh/nvim-tmux-navigation',
 	}

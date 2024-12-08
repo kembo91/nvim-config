@@ -54,10 +54,10 @@ local cmp = require('cmp')
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({})
 })
-
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
+    {name = 'buffer'}
   },
   snippet = {
     expand = function(args)

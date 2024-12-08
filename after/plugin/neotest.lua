@@ -4,3 +4,4 @@ vim.keymap.set('n', '<leader>ts', ':TestSuite<CR>')
 vim.keymap.set('n', '<leader>tl', ':TestLast<CR>') 
 
 vim.g["test#strategy"] = "basic"
+vim.g["test#basic#start_normal"] = 1

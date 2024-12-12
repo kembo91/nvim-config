@@ -5,3 +5,4 @@ vim.keymap.set('n', '<leader>tl', ':TestLast COVERAGE=1<CR>')
 
 vim.g["test#strategy"] = "basic"
 vim.g["test#basic#start_normal"] = 1
+vim.g["test#go#ginkgo#options"] = "--coverprofile=coverage.out --cover --trace"

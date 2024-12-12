@@ -4,6 +4,13 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+	use({
+	  "andythigpen/nvim-coverage",
+	  requires = "nvim-lua/plenary.nvim",
+	  config = function()
+	    require("coverage").setup()
+	  end,
+	})
 	use {
 	"NeogitOrg/neogit",
 	requires= {

@@ -21,6 +21,10 @@ return require('packer').startup(function(use)
 			"nvim-telescope/telescope.nvim", -- optional
 		},
 	}
+	use{
+		"vinnymeller/swagger-preview.nvim",
+		run = "npm i"
+      }
 	use {'vim-test/vim-test',
 		requires = {'kassio/neoterm'}
 	}
@@ -32,10 +36,6 @@ return require('packer').startup(function(use)
 	}
 	use {
 		'alexghergh/nvim-tmux-navigation',
-	}
-	use {
-	"vinnymeller/swagger-preview.nvim",
-	run = "npm i",
 	}
 	use 'wbthomason/packer.nvim'
 	use {

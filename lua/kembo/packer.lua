@@ -50,7 +50,14 @@ return require('packer').startup(function(use)
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
 	use('darrikonn/vim-gofmt', {run='GoUpdateBinaries'})
-	use('rstacruz/vim-closer')
+	---	use('rstacruz/vim-closer')
+	use {
+	    "windwp/nvim-autopairs",
+	    event = "InsertEnter",
+	    config = function()
+		require("nvim-autopairs").setup {}
+	    end
+	}
 	use{
 		'mfussenegger/nvim-dap',
 		requires = {

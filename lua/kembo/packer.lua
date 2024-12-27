@@ -4,6 +4,10 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+	use {
+		'folke/trouble.nvim',
+		requires = 'nvim-tree/nvim-web-devicons', -- Optional, for icons
+        }
 	use({
 	  "andythigpen/nvim-coverage",
 	  requires = "nvim-lua/plenary.nvim",

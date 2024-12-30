@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  catppuccin = {
-    loaded = true,
-    path = "/home/kembo/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/kembo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -145,7 +140,7 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
+    path = "/home/kembo/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
@@ -156,7 +151,7 @@ _G.packer_plugins = {
   ["nvim-coverage"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0" },
     loaded = true,
-    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/nvim-coverage",
+    path = "/home/kembo/.local/share/nvim/site/pack/packer/start/nvim-coverage",
     url = "https://github.com/andythigpen/nvim-coverage"
   },
   ["nvim-dap"] = {
@@ -229,22 +224,16 @@ _G.packer_plugins = {
     path = "/home/kembo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ["vim-closer"] = {
+  ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/kembo/.local/share/nvim/site/pack/packer/start/vim-closer",
-    url = "https://github.com/rstacruz/vim-closer"
+    path = "/home/kembo/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
-=======
->>>>>>> bbedced (autopairs)
-=======
   ["trouble.nvim"] = {
     loaded = true,
-    path = "/Users/U4Q8DXB/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    path = "/home/kembo/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
->>>>>>> 6eafdea (trouble)
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/kembo/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -263,14 +252,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-coverage
-time([[Config for nvim-coverage]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
-time([[Config for nvim-coverage]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-coverage
+time([[Config for nvim-coverage]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
+time([[Config for nvim-coverage]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

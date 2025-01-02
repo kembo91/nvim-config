@@ -57,7 +57,7 @@ cmp.setup({
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
-    {name = 'buffer'}
+    {name = 'buffer'},
   },
   snippet = {
     expand = function(args)
@@ -80,3 +80,4 @@ cmp.setup({
     end, {"i","s","c",}),
   },
 })
+

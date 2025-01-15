@@ -1,2 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+local neogit = require('neogit')
+vim.keymap.set("n", "<leader>gs", function ()
+	neogit.open()
+end)

@@ -31,7 +31,7 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
-      mapping = {
+      mapping = cmp.mapping.preset.insert({
     ["<Tab>"] = cmp.mapping(function(fallback)
       -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
       if cmp.visible() then
@@ -44,7 +44,7 @@ return {
         fallback()
       end
     end, {"i","s","c",}),
-  },
+  }),
       sources = cmp.config.sources({
         { name = "nvim_lsp"},
         { name = "luasnip" }, -- snippets

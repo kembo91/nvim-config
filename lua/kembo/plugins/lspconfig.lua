@@ -22,10 +22,10 @@ return{
 		keymap.set("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts) -- show definition, references
 
 		opts.desc = "Go to declaration"
-		keymap.set("n", "<leader>gd","<cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- go to declaration
+		keymap.set("n", "<leader>gD","<cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- go to declaration
 
 		opts.desc = "Show LSP definitions"
-		keymap.set("n", "<leader>gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- show lsp definitions
+		keymap.set("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts) -- show lsp definitions
 
 		opts.desc = "Show LSP implementations"
 		keymap.set("n", "<leader>gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- show lsp implementations

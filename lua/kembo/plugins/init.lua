@@ -10,12 +10,5 @@ return {
 		'stevearc/dressing.nvim',
 		opts = {},
 	},
-	{
-		'nvim-lualine/lualine.nvim',
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
-		config = function()
-			require("lualine").setup({})
-		end
-	},
 	"darrikonn/vim-gofmt"
 }

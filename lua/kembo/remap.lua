@@ -13,4 +13,4 @@ vim.api.nvim_create_autocmd( "BufWritePre" , {
     end,
     group = autocmd_group,
 })
-
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])

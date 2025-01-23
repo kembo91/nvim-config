@@ -8,7 +8,6 @@ vim.api.nvim_create_autocmd( "BufWritePre" , {
     pattern = "*.go" ,
     desc = "autoformat go",
     callback = function()
-	vim.cmd("GoFmt")
 	vim.cmd("GoImports")
     end,
     group = autocmd_group,

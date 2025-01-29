@@ -6,9 +6,5 @@ return {
 		event = "InsertEnter",
 		config = true
 	},
-	{
-		'stevearc/dressing.nvim',
-		opts = {},
-	},
 	"darrikonn/vim-gofmt"
 }

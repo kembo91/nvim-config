@@ -3,4 +3,4 @@ vim.g.loaded_netrwPlugin = 1
 require("kembo")
 require("kembo.remap")
 require("kembo.lazy")
-
+require("kembo.snacks")

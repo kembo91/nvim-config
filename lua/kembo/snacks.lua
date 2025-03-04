@@ -2,6 +2,7 @@
 vim.keymap.set("n", "<leader>gs", function()
 	Snacks.lazygit()
 end)
+vim.keymap.set("n", "<leader>ds", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
 
 local prev = { new_name = "", old_name = "" } -- Prevents duplicate events
 vim.api.nvim_create_autocmd("User", {

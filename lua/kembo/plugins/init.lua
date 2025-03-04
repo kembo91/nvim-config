@@ -6,5 +6,4 @@ return {
 		event = "InsertEnter",
 		config = true
 	},
-	"darrikonn/vim-gofmt"
 }

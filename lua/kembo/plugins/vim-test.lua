@@ -1,4 +1,4 @@
-return{
+return {
 	'vim-test/vim-test',
 	config = function()
 		vim.keymap.set('n', '<leader>tt', ':TestNearest COVERAGE=1<CR>')

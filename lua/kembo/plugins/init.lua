@@ -6,4 +6,5 @@ return {
 		event = "InsertEnter",
 		config = true
 	},
+	{ "terrortylor/nvim-comment" },
 }

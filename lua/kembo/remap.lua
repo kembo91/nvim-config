@@ -1,14 +1,4 @@
 vim.g.mapleader = " "
-local autocmd_group = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.go",
-	desc = "autoformat go",
-	callback = function()
-		vim.cmd("GoImports")
-	end,
-	group = autocmd_group,
-})
-
 local ymalgrp = vim.api.nvim_create_augroup("yaml auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.yml",
@@ -29,4 +19,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	group = allgrp,
 })
 
+local autocmd_group = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.go",
+	desc = "autoformat go",
+	callback = function()
+		vim.cmd("GoImports")
+		vim.cmd("GoFmt")
+	end,
+	group = autocmd_group,
+})
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+

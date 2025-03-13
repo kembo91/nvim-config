@@ -28,6 +28,27 @@ return {
 				cwd_bonus = true,
 			}
 
+		},
+		dashboard = {
+			formats = {
+				key = function(item)
+					return { { "[", hl = "special" }, { item.key, hl = "key" }, { "]", hl = "special" } }
+				end,
+			},
+			sections = {
+				{ section = "header" },
+				{ section = "keys",   gap = 1, padding = 1 },
+				{ section = "startup" },
+				{
+					section = "terminal",
+					cmd = "fortune -s | cowsay",
+					hl = "header",
+					random = 10,
+					pane = 2,
+					indent = 4,
+					height = 30,
+				},
+			},
 		}
-	},
+	}
 }

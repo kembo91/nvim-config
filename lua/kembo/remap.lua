@@ -9,9 +9,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	group = ymalgrp,
 })
 
-local allgrp = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
+local allgrp = vim.api.nvim_create_augroup("all auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.*",
+	pattern = "*.lua",
 	desc = "autoformat all",
 	callback = function()
 		vim.lsp.buf.format()
@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	group = allgrp,
 })
 
-local autocmd_group = vim.api.nvim_create_augroup("Custom auto-commands", { clear = true })
+local autocmd_group = vim.api.nvim_create_augroup("golang auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.go",
 	desc = "autoformat go",
@@ -31,4 +31,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-

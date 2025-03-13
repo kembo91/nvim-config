@@ -21,9 +21,6 @@ return {
 		end },
 	},
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
 		bigfile = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
@@ -40,6 +37,7 @@ return {
 			}
 
 		},
+		statuscolumn = { enabled = true },
 		dashboard = {
 			formats = {
 				key = function(item)

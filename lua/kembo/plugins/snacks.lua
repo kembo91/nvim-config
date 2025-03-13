@@ -4,10 +4,21 @@ return {
 	lazy = false,
 	keys = {
 		{ "<leader>pf", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
+		{
+			"<leader>pr",
+			function()
+				Snacks.picker.recent({
+					on_show = function()
+						vim.cmd.stopinsert()
+					end,
+				})
+			end,
+			desc = "Find recent files"
+		},
 		{ "<leader>ps", function() Snacks.picker.grep() end,  desc = "Grep" },
 		{ "<leader>gs", function()
 			Snacks.lazygit()
-		end }
+		end },
 	},
 	opts = {
 		-- your configuration comes here

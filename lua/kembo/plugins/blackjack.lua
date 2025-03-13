@@ -5,5 +5,6 @@ return {
 		require("blackjack").setup({
 			card_style = "large"
 		})
+		vim.keymap.set("n", "<leader>bj", ":BlackJackNewGame <CR>")
 	end
 }

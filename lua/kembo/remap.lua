@@ -1,17 +1,7 @@
 vim.g.mapleader = " "
-local ymalgrp = vim.api.nvim_create_augroup("yaml auto-commands", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.yml",
-	desc = "autoformat ymal",
-	callback = function()
-		vim.lsp.buf.format()
-	end,
-	group = ymalgrp,
-})
-
 local allgrp = vim.api.nvim_create_augroup("all auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.lua",
+	pattern = "*.*",
 	desc = "autoformat all",
 	callback = function()
 		vim.lsp.buf.format()

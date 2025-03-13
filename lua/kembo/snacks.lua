@@ -1,4 +1,3 @@
----@type fun(opts?: snacks.lazygit.Config): snacks.win
 vim.keymap.set("n", "<leader>gs", function()
 	Snacks.lazygit()
 end)

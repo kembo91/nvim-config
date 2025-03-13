@@ -50,7 +50,7 @@ return {
 				{ section = "startup" },
 				{
 					section = "terminal",
-					cmd = "fortune -s | cowsay",
+					cmd = "fortune -s | cowsay -e ^^",
 					hl = "header",
 					random = 10,
 					pane = 2,

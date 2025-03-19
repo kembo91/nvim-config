@@ -1,12 +1,5 @@
 vim.g.mapleader = " "
-local tsgrp = vim.api.nvim_create_augroup("ts auto-commands", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*.ts",
-	desc = "autoformat ts",
-	callback = function()
-	end,
-	group = tsgrp,
-})
+
 local allgrp = vim.api.nvim_create_augroup("all auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.*",
@@ -17,6 +10,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	group = allgrp,
 })
 
+local tsgrp = vim.api.nvim_create_augroup("ts auto-commands", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.ts",
+	desc = "autoformat ts",
+	callback = function()
+	end,
+	group = tsgrp,
+})
 local autocmd_group = vim.api.nvim_create_augroup("golang auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.go",

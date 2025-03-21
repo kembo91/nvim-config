@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 local allgrp = vim.api.nvim_create_augroup("all auto-commands", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.*",

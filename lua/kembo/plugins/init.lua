@@ -7,4 +7,5 @@ return {
 		config = true
 	},
 	{ "terrortylor/nvim-comment" },
+	{ "haya14busa/is.vim" },
 }

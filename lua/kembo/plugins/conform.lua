@@ -1,21 +1,20 @@
 return {
-	'stevearc/conform.nvim',
+	"stevearc/conform.nvim",
 	opts = {},
 	config = function()
 		local conform = require("conform")
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "standardjs" },
-				go = { "goimports" }
+				go = { "goimports" },
 			},
 			default_format_opts = {
-				lsp_format = "fallback",
+				lsp_format = "never",
 			},
 			format_on_save = {
-				lsp_format = "fallback",
-				timeout_ms = 500,
+				lsp_format = "never",
+				timeout_ms = 1500,
 			},
 		})
-	end
+	end,
 }

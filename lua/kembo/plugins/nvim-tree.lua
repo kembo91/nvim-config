@@ -9,7 +9,7 @@ return {
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 		vim.opt.termguicolors = true
-		require("nvim-tree").setup {
+		require("nvim-tree").setup({
 			diagnostics = {
 				enable = true,
 				show_on_dirs = true,
@@ -17,8 +17,11 @@ return {
 			},
 			update_focused_file = {
 				enable = true,
-			}
-		}
+			},
+			view = {
+				side = "right",
+			},
+		})
 		vim.keymap.set("n", "<C-q>", "<Cmd>NvimTreeToggle<CR>,{silent=true}")
 	end,
 }

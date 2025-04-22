@@ -22,6 +22,6 @@ return {
 				side = "right",
 			},
 		})
-		vim.keymap.set("n", "<C-q>", "<Cmd>NvimTreeToggle<CR>,{silent=true}")
+		vim.keymap.set("n", "<C-q>", "<Cmd>NvimTreeToggle<CR>")
 	end,
 }

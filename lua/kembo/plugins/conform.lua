@@ -7,6 +7,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "goimports" },
+				terraform = { "terraform_fmt" },
 			},
 			default_format_opts = {
 				lsp_format = "never",

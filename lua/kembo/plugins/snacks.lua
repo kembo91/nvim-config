@@ -3,7 +3,13 @@ return {
 	priority = 1000,
 	lazy = false,
 	keys = {
-		{ "<leader>pf", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
+		{
+			"<leader>pf",
+			function()
+				Snacks.picker.smart()
+			end,
+			desc = "Smart Find Files",
+		},
 		{
 			"<leader>pr",
 			function()
@@ -13,12 +19,21 @@ return {
 					end,
 				})
 			end,
-			desc = "Find recent files"
+			desc = "Find recent files",
 		},
-		{ "<leader>ps", function() Snacks.picker.grep() end,  desc = "Grep" },
-		{ "<leader>gs", function()
-			Snacks.lazygit()
-		end },
+		{
+			"<leader>ps",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		{
+			"<leader>gs",
+			function()
+				Snacks.lazygit()
+			end,
+		},
 	},
 	opts = {
 		bigfile = { enabled = true },
@@ -34,8 +49,7 @@ return {
 			matcher = {
 				frecency = true,
 				cwd_bonus = true,
-			}
-
+			},
 		},
 		statuscolumn = { enabled = true },
 		dashboard = {
@@ -46,7 +60,7 @@ return {
 			},
 			sections = {
 				{ section = "header" },
-				{ section = "keys",   gap = 1, padding = 1 },
+				{ section = "keys", gap = 1, padding = 1 },
 				{ section = "startup" },
 				{
 					section = "terminal",
@@ -58,6 +72,6 @@ return {
 					height = 30,
 				},
 			},
-		}
-	}
+		},
+	},
 }

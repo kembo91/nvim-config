@@ -8,6 +8,8 @@ return {
 				lua = { "stylua" },
 				go = { "goimports" },
 				terraform = { "terraform_fmt" },
+				javascript = {"prettierd"},
+				typescript = {"prettierd"}
 			},
 			default_format_opts = {
 				lsp_format = "never",

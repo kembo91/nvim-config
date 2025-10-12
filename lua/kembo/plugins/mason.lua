@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"mason-org/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
+		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
 		require("mason").setup({
@@ -15,8 +16,21 @@ return {
 			},
 		})
 
-		require("mason-lspconfig").setup({
+		local lspconfig = require("lspconfig")
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local mason_lspconfig = require("mason-lspconfig")
+
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+
+		mason_lspconfig.setup({
 			automatic_installation = true,
+			handlers = {
+				function(server_name)
+					lspconfig[server_name].setup({
+						capabilities = capabilities,
+					})
+				end,
+			},
 		})
 
 		local keymap = vim.keymap

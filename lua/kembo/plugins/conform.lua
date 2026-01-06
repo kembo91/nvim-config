@@ -8,8 +8,9 @@ return {
 				lua = { "stylua" },
 				go = { "goimports" },
 				terraform = { "terraform_fmt" },
-				javascript = {"prettierd"},
-				typescript = {"prettierd"}
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				py = { "autoflake" },
 			},
 			default_format_opts = {
 				lsp_format = "never",

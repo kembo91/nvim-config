@@ -9,5 +9,14 @@ return {
 		vim.g["test#strategy"] = "basic"
 		vim.g["test#basic#start_normal"] = 1
 		vim.g["test#go#ginkgo#options"] = "--coverprofile=coverage.out --cover --trace"
+		function customPath()
+			cwd = vim.fn.getcwd()
+			if string.find(cwd, 'lexi') then
+				return cwd .. "/svc"
+			end
+			return cwd
+		end
+		vim.g["test#project_root"] = customPath()
+
 	end
 }
